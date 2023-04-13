@@ -54,10 +54,6 @@ class PagesController extends Controller
         ]);
     }
     
- }
-  
-  
-
     public function exchange()
     {
         return view('user.exchange', [
@@ -72,4 +68,11 @@ class PagesController extends Controller
         ]);
     }
 
-}
+    public function aboutus(){
+        return view('user.aboutus', [
+            'title' => 'About Us',
+        ]);
+    }
+ }
+  
+  
