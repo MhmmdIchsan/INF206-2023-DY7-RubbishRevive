@@ -51,16 +51,12 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
     Route::get('/logout', [LoginController::class, 'destroy'])->middleware('auth');
     Route::get('/pickup', [PagesController::class, 'pickup'])->middleware('auth');
     Route::get('/informasi', [PagesController::class, 'informasi'])->middleware('auth');
-
-
-
-
-    Route::get('/dashboard', [PagesController::class, 'dashboard'])->middleware('auth');
-    Route::get('/myprofile', [PagesController::class, 'myprofile'])->middleware('auth');
-    Route::get('/ongoing', [PagesController::class, 'ongoing'])->middleware('auth');
-    Route::get('/history', [PagesController::class, 'history'])->middleware('auth');
     Route::get('/exchange', [PagesController::class, 'exchange'])->middleware('auth');
     Route::get('/tukar', [PagesController::class, 'tukar'])->middleware('auth');
+    Route::get('/aboutus', [PagesController::class, 'aboutus'])->middleware('auth');
+
+
+
 
 
     // Route ini akan mengarahkan ke halaman logout
