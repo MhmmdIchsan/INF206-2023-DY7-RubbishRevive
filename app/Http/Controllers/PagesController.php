@@ -53,6 +53,12 @@ class PagesController extends Controller
             'title' => 'Informasi',
         ]);
     }
+
+    public function informasi2(){
+        return view('user.informasi2', [
+            'title' => 'Informasi',
+        ]);
+    }
     
     public function exchange()
     {
