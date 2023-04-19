@@ -42,24 +42,27 @@ class PagesController extends Controller
         ]);
     }
 
-    public function pickup(){
+    public function pickup()
+    {
         return view('user.pickup', [
             'title' => 'Pickup',
         ]);
     }
 
-    public function informasi(){
+    public function informasi()
+    {
         return view('user.informasi', [
             'title' => 'Informasi',
         ]);
     }
 
-    public function informasi2(){
+    public function informasi2()
+    {
         return view('user.informasi2', [
             'title' => 'Informasi',
         ]);
     }
-    
+
     public function exchange()
     {
         return view('user.exchange', [
@@ -74,11 +77,16 @@ class PagesController extends Controller
         ]);
     }
 
-    public function aboutus(){
+    public function aboutus()
+    {
         return view('user.aboutus', [
             'title' => 'About Us',
         ]);
     }
- }
-  
-  
+    public function pricelist()
+    {
+        return view('user.pricelist', [
+            'title' => 'Price List',
+        ]);
+    }
+}
