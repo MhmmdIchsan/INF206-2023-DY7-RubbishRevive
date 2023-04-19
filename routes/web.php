@@ -55,6 +55,7 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
     Route::get('/exchange', [PagesController::class, 'exchange'])->middleware('auth');
     Route::get('/tukar', [PagesController::class, 'tukar'])->middleware('auth');
     Route::get('/aboutus', [PagesController::class, 'aboutus'])->middleware('auth');
+    Route::get('/pricelist', [PagesController::class, 'pricelist'])->middleware('auth');
 
 
 
