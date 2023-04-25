@@ -51,14 +51,28 @@ class PagesController extends Controller
 
     public function informasi()
     {
-        return view('user.informasi', [
+        return view('informasi.informasi', [
             'title' => 'Informasi',
         ]);
     }
 
     public function informasi2()
     {
-        return view('user.informasi2', [
+        return view('informasi.informasi2', [
+            'title' => 'Informasi',
+        ]);
+    }
+
+    public function informasi3()
+    {
+        return view('informasi.informasi3', [
+            'title' => 'Informasi',
+        ]);
+    }
+
+    public function informasi4()
+    {
+        return view('informasi.informasi4', [
             'title' => 'Informasi',
         ]);
     }
