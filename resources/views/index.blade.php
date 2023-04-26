@@ -30,7 +30,7 @@ class="background-image: asset('image/background.png')"
                    Penggunaan plastik yang masif dalam kehidupan sehari-hari telah menyebabkan pencemaran lingkungan meliputi tanah, air, laut, bahkan udara.
                    Salah satu solusi untuk mengatasinya yakni dengan mendaur ulang limbah plastik menjadi kerajinan.
                    </p>
-                   <a href="/informasi" class=" bg-slate-400 font-semibold text-xs py-2 px-4 rounded-3xl border-2 shadow-2xl">
+                   <a href="/informasi-jenis-plastik" class=" bg-slate-400 font-semibold text-xs py-2 px-4 rounded-3xl border-2 shadow-2xl">
                        Baca lebih lanjut >></a>
                </div>
 
@@ -43,7 +43,7 @@ class="background-image: asset('image/background.png')"
                    Salah satu pengolahan limbah yang sering dilakukan oleh masyarakat adalah pembuatan pupuk kompos.
                    Simak cara pembuatan pupuk kompos dari sampah bekas pada artikel.
                    </p>
-                   <a href="/informasi" class=" bg-slate-400 font-semibold text-xs py-2 px-4 rounded-3xl border-2 shadow-2xl">
+                   <a href="/informasi-jenis-kompos" class=" bg-slate-400 font-semibold text-xs py-2 px-4 rounded-3xl border-2 shadow-2xl">
                        Baca lebih lanjut >></a>
                </div>
 
@@ -56,7 +56,7 @@ class="background-image: asset('image/background.png')"
                         Hal ini menunjukkan bahwa dalam setahun ada setidaknya 9.600 pohon yang ditebang untuk memenuhi kebutuhan kertas global.
                         Simak berbagai cara alternatif dalam mengelola sampah kertas.
                    </p>
-                   <a href="/informasi" class=" bg-slate-400 font-semibold text-xs py-2 px-4 rounded-3xl border-2 shadow-2xl">
+                   <a href="/informasi-jenis-kertas" class=" bg-slate-400 font-semibold text-xs py-2 px-4 rounded-3xl border-2 shadow-2xl">
                        Baca lebih lanjut >></a>
                </div>
                <div class="bg-white opacity-90 p-8 rounded-xl shadow-slate-600 border-2 ">
@@ -68,7 +68,7 @@ class="background-image: asset('image/background.png')"
                         Hal ini menunjukkan bahwa dalam setahun ada setidaknya 9.600 pohon yang ditebang untuk memenuhi kebutuhan kertas global.
                         Simak berbagai cara alternatif dalam mengelola sampah kertas.
                    </p>
-                   <a href="/informasi" class=" bg-slate-400 font-semibold text-xs py-2 px-4 rounded-3xl border-2 shadow-2xl">
+                   <a href="/informasi-jenis-anorganik" class=" bg-slate-400 font-semibold text-xs py-2 px-4 rounded-3xl border-2 shadow-2xl">
                        Baca lebih lanjut >></a>
                </div>
             </div>
