@@ -12,10 +12,12 @@ class="bg-[#D6EEF5]"
 <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900">
   <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
       <article class="mx-auto w-full max-w-4xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
-      <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">Cara Pembuatan Pupuk Kompos dari Sampah Bekas</h1>
+      <h1 class="mb-4 text-3xl text-center font-bold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">Cara Pembuatan Pupuk Kompos dari Sampah Bekas</h1>
 
-          <figure"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
-          </figure>
+          <div><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+          <p class=" text-xs text-center pt-2 italic no-underline hover:underline"> sumber: <a href = "https://unsplash.com/photos/BduDcrySLKM" target="_blank"> https://unsplash.com/photos/BduDcrySLKM</p>
+    
+        </div>
         <div class="text-justify"><p class=""> <br> Setiap rumah tangga pasti menghasilkan limbah baik itu limbah organik maupun limbah anorganik. 
         Berbagai macam bentuk limbah  pun dihasilkan mulai dari yang cair maupun yang padat. Jika limbah tersebut tidak diolah dengan baik bisa mencemari lingkungan sehingga diperlukan pengolahan limbah yang baik dan benar. 
         Salah satu pengolahan limbah yang sering dilakukan oleh masyarakat adalah pembuatan pupuk kompos.  Sampah yang tadinya tidak berguna bisa diubah menjadi pupuk kompos yang lebih berguna. 
@@ -60,6 +62,7 @@ class="bg-[#D6EEF5]"
                 perbandingannya adalah 1:5 begitu pula dengan yang pupuk padat.
 
             </p>
+            <p class=" text-xs text-justify pt-10 pb-10 italic no-underline hover:underline"> sumber artikel : <a href = "https://environment-indonesia.com/articles/cara-mudah-daur-ulang-sampah-kertas-jadi-kompos/" target="_blank"> https://environment-indonesia.com/articles/cara-mudah-daur-ulang-sampah-kertas-jadi-kompos/</p>
 
 </div>
 

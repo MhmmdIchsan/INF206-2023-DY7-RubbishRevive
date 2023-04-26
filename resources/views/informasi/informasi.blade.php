@@ -12,11 +12,11 @@ class="bg-[#D6EEF5]"
 <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900">
   <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
       <article class="mx-auto w-full max-w-4xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
-      <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">Cara pengolahan sampah plastik menjadi kerajinan</h1>
+      <h1 class="mb-4 text-3xl text-center font-bold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">Cara Pengolahan Sampah Plastik Menjadi Kerajinan</h1>
 
-          <figure"><img src="https://images.unsplash.com/photo-1571727153934-b9e0059b7ab2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
-
-          </figure>
+          <div><img src="https://images.unsplash.com/photo-1565886728041-a239b6a3ec42?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="">
+          <p class=" text-xs text-center pt-2 italic no-underline hover:underline"> sumber: <a href = "https://unsplash.com/photos/IvWEUvMwmlg" target="_blank"> https://unsplash.com/photos/IvWEUvMwmlg</p>
+          </div>
         <div class="text-justify"><p class=""> <br> Limbah plastik merupakan sumber pencemaran lingkungan.
             Penggunaan plastik yang masif dalam kehidupan sehari-hari telah menyebabkan pencemaran lingkungan meliputi tanah, air, laut, bahkan udara.
             Salah satu solusi untuk mengatasinya yakni dengan mendaur ulang limbah plastik menjadi kerajinan. </p>
@@ -76,6 +76,8 @@ class="bg-[#D6EEF5]"
             </ol>
 
             </p>
+
+            <p class=" text-xs text-justify pt-10 pb-10 italic no-underline hover:underline"> sumber artikel : <a href = "https://gaya.tempo.co/read/1576376/4-cara-membuat-kerajinan-dari-limbah-plastik" target="_blank"> https://gaya.tempo.co/read/1576376/4-cara-membuat-kerajinan-dari-limbah-plastik</p>
 
 </div>
 

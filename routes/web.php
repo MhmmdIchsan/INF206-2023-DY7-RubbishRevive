@@ -24,6 +24,12 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
     Route::get('/', [PagesController::class, 'halamanUtama']);
 
 
+    // Route ini untuk mengarah ke halaman informasi jenis pengolahan sampah
+    Route::get('/informasi-jenis-plastik', [PagesController::class, 'informasi']);
+    Route::get('/informasi-jenis-kompos', [PagesController::class, 'informasi2']);
+    Route::get('/informasi-jenis-kertas', [PagesController::class, 'informasi3']);
+    Route::get('/informasi-jenis-anorganik', [PagesController::class, 'informasi3']);
+
     // Route ini akan mengarahkan ke halaman login
 // url: yang akhiranya adalah /loginpage akan diarahkan ke halaman login
     Route::get('/login', [LoginController::class, 'index'])->name('login');
@@ -50,12 +56,10 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
     Route::get('/history', [PagesController::class, 'history'])->middleware('auth');
     Route::get('/logout', [LoginController::class, 'destroy'])->middleware('auth');
     Route::get('/pickup', [PagesController::class, 'pickup'])->middleware('auth');
-    Route::get('/informasi', [PagesController::class, 'informasi'])->middleware('auth');
-    Route::get('/informasi2', [PagesController::class, 'informasi2'])->middleware('auth');
     Route::get('/exchange', [PagesController::class, 'exchange'])->middleware('auth');
     Route::get('/tukar', [PagesController::class, 'tukar'])->middleware('auth');
     Route::get('/aboutus', [PagesController::class, 'aboutus'])->middleware('auth');
-
+    Route::get('/pricelist', [PagesController::class, 'pricelist'])->middleware('auth');
 
 
 
