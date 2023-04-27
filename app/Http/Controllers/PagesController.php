@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class PagesController extends Controller
@@ -15,10 +16,28 @@ class PagesController extends Controller
 
     public function dashboard()
     {
+        $role=Auth::user()->role;
+        
+        if($role=='1')
+        {
+            return view('admin.dashboard', [
+                'title' => 'Dashboard',
+            ]);
+        }
 
-        return view('user.dashboard', [
-            'title' => 'Dashboard',
-        ]);
+        if($role=='2')
+        {
+            return view('driver.dashboard', [
+                'title' => 'Dashboard',
+            ]);
+        }
+
+        else
+        {
+            return view('user.dashboard', [
+                'title' => 'Dashboard',
+            ]);
+        }
     }
 
     public function myprofile()
@@ -44,9 +63,28 @@ class PagesController extends Controller
 
     public function pickup()
     {
+        $role=Auth::user()->role;
+
+        if($role=='1')
+        {
+            return view('admin.pickup', [
+                'title' => 'Pickup',
+            ]);
+        }
+
+        if($role=='2')
+        {
+            return view('driver.pickup', [
+                'title' => 'Pickup',
+            ]);
+        }
+
+        else
+        {
         return view('user.pickup', [
             'title' => 'Pickup',
         ]);
+        }
     }
 
     public function informasi()
