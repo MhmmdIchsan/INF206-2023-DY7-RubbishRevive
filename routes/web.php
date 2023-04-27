@@ -23,6 +23,8 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
 // url: yang akhiranya adalah / akan diarahkan ke halaman utama
     Route::get('/', [PagesController::class, 'halamanUtama']);
 
+    Route::get('/redirects', [PagesController::class, 'index']);
+
 
     // Route ini untuk mengarah ke halaman informasi jenis pengolahan sampah
     Route::get('/informasi-jenis-plastik', [PagesController::class, 'informasi']);
