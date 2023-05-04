@@ -36,3 +36,20 @@ class PickupController extends Controller
             'jenissampah' => 'required',
             'beratsampah' => 'required',
         ]);
+
+        // $image = $request->file('image');
+        // $image->storeAs('public/pickups', $image->hashName());
+
+        Pickup::create([
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'jenissampah' => $request->jenissampah,
+            'beratsampah' => $request->beratsampah,
+        ]);
+
+        return redirect()->route('pickup.index')
+            ->with('success', 'Pickup created successfully.');
+    }
+}
