@@ -138,6 +138,30 @@ class PagesController extends Controller
             'title' => 'Tukar',
         ]);
     }
+    public function tukarListrik50()
+    {
+        return view('user.tukarListrik50', [
+            'title' => 'Tukar',
+        ]);
+    }
+    public function tukarListrik100()
+    {
+        return view('user.tukarListrik100', [
+            'title' => 'Tukar',
+        ]);
+    }
+    public function tukarListrik150()
+    {
+        return view('user.tukarListrik150', [
+            'title' => 'Tukar',
+        ]);
+    }
+    public function tukarListrik200()
+    {
+        return view('user.tukarListrik200', [
+            'title' => 'Tukar',
+        ]);
+    }
 
     public function aboutus()
     {
