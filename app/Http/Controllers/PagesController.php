@@ -16,24 +16,19 @@ class PagesController extends Controller
 
     public function dashboard()
     {
-        $role=Auth::user()->role;
-        
-        if($role=='1')
-        {
+        $role = Auth::user()->role;
+
+        if ($role == '1') {
             return view('admin.dashboard', [
                 'title' => 'Dashboard',
             ]);
         }
 
-        if($role=='2')
-        {
+        if ($role == '2') {
             return view('driver.dashboard', [
                 'title' => 'Dashboard',
             ]);
-        }
-
-        else
-        {
+        } else {
             return view('user.dashboard', [
                 'title' => 'Dashboard',
             ]);
@@ -63,27 +58,22 @@ class PagesController extends Controller
 
     public function pickup()
     {
-        $role=Auth::user()->role;
+        $role = Auth::user()->role;
 
-        if($role=='1')
-        {
+        if ($role == '1') {
             return view('admin.pickup', [
                 'title' => 'Pickup',
             ]);
         }
 
-        if($role=='2')
-        {
+        if ($role == '2') {
             return view('driver.pickup', [
                 'title' => 'Pickup',
             ]);
-        }
-
-        else
-        {
-        return view('user.pickup', [
-            'title' => 'Pickup',
-        ]);
+        } else {
+            return view('user.pickup', [
+                'title' => 'Pickup',
+            ]);
         }
     }
 
@@ -122,9 +112,53 @@ class PagesController extends Controller
         ]);
     }
 
-    public function tukar()
+    public function tukarPulsa10()
     {
-        return view('user.tukar', [
+        return view('user.tukarPulsa10', [
+            'title' => 'Tukar',
+        ]);
+    }
+
+    public function tukarPulsa20()
+    {
+        return view('user.tukarPulsa20', [
+            'title' => 'Tukar',
+        ]);
+    }
+
+    public function tukarPulsa50()
+    {
+        return view('user.tukarPulsa50', [
+            'title' => 'Tukar',
+        ]);
+    }
+    public function tukarPulsa100()
+    {
+        return view('user.tukarPulsa100', [
+            'title' => 'Tukar',
+        ]);
+    }
+    public function tukarListrik50()
+    {
+        return view('user.tukarListrik50', [
+            'title' => 'Tukar',
+        ]);
+    }
+    public function tukarListrik100()
+    {
+        return view('user.tukarListrik100', [
+            'title' => 'Tukar',
+        ]);
+    }
+    public function tukarListrik150()
+    {
+        return view('user.tukarListrik150', [
+            'title' => 'Tukar',
+        ]);
+    }
+    public function tukarListrik200()
+    {
+        return view('user.tukarListrik200', [
             'title' => 'Tukar',
         ]);
     }
