@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('pickups', function (Blueprint $table) {
             $table->id();
+            $table->string("nama");
+            $table->string("alamat");
+            $table->string("phone");
+            $table->string("email");
+            $table->string("jenissampah");
+            $table->string("beratsampah");
+            $table->string("status")->default("pending");
             $table->timestamps();
         });
     }
