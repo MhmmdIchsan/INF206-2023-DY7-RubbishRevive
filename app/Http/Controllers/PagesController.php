@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class PagesController extends Controller
@@ -15,10 +16,28 @@ class PagesController extends Controller
 
     public function dashboard()
     {
+        $role=Auth::user()->role;
+        
+        if($role=='1')
+        {
+            return view('admin.dashboard', [
+                'title' => 'Dashboard',
+            ]);
+        }
 
-        return view('user.dashboard', [
-            'title' => 'Dashboard',
-        ]);
+        if($role=='2')
+        {
+            return view('driver.dashboard', [
+                'title' => 'Dashboard',
+            ]);
+        }
+
+        else
+        {
+            return view('user.dashboard', [
+                'title' => 'Dashboard',
+            ]);
+        }
     }
 
     public function myprofile()
@@ -44,21 +63,54 @@ class PagesController extends Controller
 
     public function pickup()
     {
+        $role=Auth::user()->role;
+
+        if($role=='1')
+        {
+            return view('admin.pickup', [
+                'title' => 'Pickup',
+            ]);
+        }
+
+        if($role=='2')
+        {
+            return view('driver.pickup', [
+                'title' => 'Pickup',
+            ]);
+        }
+
+        else
+        {
         return view('user.pickup', [
             'title' => 'Pickup',
         ]);
+        }
     }
 
     public function informasi()
     {
-        return view('user.informasi', [
+        return view('informasi.informasi', [
             'title' => 'Informasi',
         ]);
     }
 
     public function informasi2()
     {
-        return view('user.informasi2', [
+        return view('informasi.informasi2', [
+            'title' => 'Informasi',
+        ]);
+    }
+
+    public function informasi3()
+    {
+        return view('informasi.informasi3', [
+            'title' => 'Informasi',
+        ]);
+    }
+
+    public function informasi4()
+    {
+        return view('informasi.informasi4', [
             'title' => 'Informasi',
         ]);
     }
