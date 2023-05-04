@@ -64,6 +64,9 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
     Route::get('/tukarPulsa50', [PagesController::class, 'tukarPulsa50'])->middleware('auth');
     Route::get('/tukarPulsa100', [PagesController::class, 'tukarPulsa100'])->middleware('auth');
     Route::get('/tukarListrik50', [PagesController::class, 'tukarListrik50'])->middleware('auth');
+    Route::get('/tukarListrik100', [PagesController::class, 'tukarListrik100'])->middleware('auth');
+    Route::get('/tukarListrik150', [PagesController::class, 'tukarListrik150'])->middleware('auth');
+    Route::get('/tukarListrik200', [PagesController::class, 'tukarListrik200'])->middleware('auth');
     Route::get('/aboutus', [PagesController::class, 'aboutus'])->middleware('auth');
     Route::get('/pricelist', [PagesController::class, 'pricelist'])->middleware('auth');
 
