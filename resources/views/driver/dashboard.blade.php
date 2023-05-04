@@ -72,6 +72,7 @@ class="bg-[#D6EEF5]"
         </div>
         <!--carousel end-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+
     </div>
     <div class="flex flex-wrap justify-center m-13 ">
 
@@ -138,4 +139,6 @@ class="bg-[#D6EEF5]"
             </div>
         </div>
     </div>
+
+    
     @endsection
