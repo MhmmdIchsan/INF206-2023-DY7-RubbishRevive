@@ -25,3 +25,14 @@ class PickupController extends Controller
             'title' => 'Pickup',
         ]);
     }
+
+    public function store(Request $request): RedirectResponse
+    {
+        $this->validate($request, [
+            'nama' => 'required',
+            'alamat' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'jenissampah' => 'required',
+            'beratsampah' => 'required',
+        ]);
