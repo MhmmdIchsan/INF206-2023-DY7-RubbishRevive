@@ -9,5 +9,14 @@ use Illuminate\Http\RedirectResponse;
 
 class PickupController extends Controller
 {
+    public function index(): View
+    {
+        $pickups = Pickup::latest()->paginate(5);
+
+        return view('user.ongoing', compact('pickups'), [
+            'title' => 'Pickup',
+        ]);
+    }
+
     
 }
