@@ -18,5 +18,10 @@ class PickupController extends Controller
         ]);
     }
 
-    
-}
+    public function create(): View
+    {
+
+        return view('pickup.create', [
+            'title' => 'Pickup',
+        ]);
+    }
