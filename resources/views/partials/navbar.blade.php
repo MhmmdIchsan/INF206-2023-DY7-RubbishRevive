@@ -1,7 +1,7 @@
 @auth
 @if(auth()->user()->role == '0')
 <header class="relative inset-x-0 bottom-0">
-    <div class="flex inset-x-0 relative w-auto relative bg-[#A7D1DD] flex justify-between shadow-xl">
+    <div class="flex inset-x-0 relative w-auto bg-[#A7D1DD] justify-between shadow-xl">
         <div class="px-4 flex justify-start">
             <a href="/dashboard" class="font-bold text-lg text-primary block py-1">
                 <img src="{{ asset('image/logo.png') }}" alt="logo" class="w-20">
@@ -16,7 +16,7 @@
             </button>
 
             <nav id="nav-menu"
-                class="hidden relative inset-x-0 w-auto py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none  ">
+                class="hidden relative inset-x-0 py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none  ">
                 <ul class="block lg:flex ">
 
 
@@ -30,7 +30,7 @@
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Pricelist</a>
                         </li>
                         <li class="group">
-                            <a href="/pickuptime"
+                            <a href="/jadwal-pickup"
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Jadwal Pickup</a>
                         </li>
                         <li class="group">
@@ -57,7 +57,7 @@
 
 @elseif(auth()->user()->role == '1')
 <header class="relative inset-x-0 bottom-0">
-    <div class="flex inset-x-0 relative w-auto relative bg-[#A7D1DD] flex justify-between shadow-xl">
+    <div class="flex inset-x-0 relative w-auto bg-[#A7D1DD] justify-between shadow-xl">
         <div class="px-4 flex justify-start">
             <a href="/dashboard" class="font-bold text-lg text-primary block py-1">
                 <img src="{{ asset('image/logo.png') }}" alt="logo" class="w-20">
@@ -72,7 +72,7 @@
             </button>
 
             <nav id="nav-menu"
-                class="hidden relative inset-x-0 w-auto py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none  ">
+                class="hidden relative inset-x-0 py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none  ">
                 <ul class="block lg:flex ">
 
 
@@ -113,7 +113,7 @@
 
 @elseif(auth()->user()->role == '2')
 <header class="relative inset-x-0 bottom-0">
-    <div class="flex inset-x-0 relative w-auto relative bg-[#A7D1DD] flex justify-between shadow-xl">
+    <div class="flex inset-x-0 relative w-auto bg-[#A7D1DD] justify-between shadow-xl">
         <div class="px-4 flex justify-start">
             <a href="/dashboard" class="font-bold text-lg text-primary block py-1">
                 <img src="{{ asset('image/logo.png') }}" alt="logo" class="w-20">
@@ -128,7 +128,7 @@
             </button>
 
             <nav id="nav-menu"
-                class="hidden relative inset-x-0 w-auto py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none  ">
+                class="hidden relative inset-x-0 py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none  ">
                 <ul class="block lg:flex ">
 
 
@@ -162,7 +162,7 @@
 @endauth
 @else
 <header class="relative inset-x-0 bottom-0">
-    <div class="flex inset-x-0 relative w-auto relative bg-[#A7D1DD] flex justify-between shadow-xl">
+    <div class="flex inset-x-0 relative w-auto bg-[#A7D1DD] justify-between shadow-xl">
         <div class="px-4 flex justify-start">
             <a href="/dashboard" class="font-bold text-lg text-primary block py-1">
                 <img src="{{ asset('image/logo.png') }}" alt="logo" class="w-20">
