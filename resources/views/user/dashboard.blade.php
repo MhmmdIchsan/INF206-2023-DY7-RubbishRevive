@@ -9,8 +9,8 @@ class="bg-[#D6EEF5]"
 
 
 <div>
-    <h1 class="block text-center font-bold text-5xl lg:text-5xl m-5 pt-15 text-[#737373]">Welcome <span
-            class="underline"> {{ Auth::user()->name }}</span>!</h1>
+    <h1 class="block text-center font-bold text-3xl my-2 lg:text-5xl pt-10 text-[#737373]">Selamat Datang, <span
+            class="underline italic"> {{ Auth::user()->name }}</span>!</h1>
     <div class="max-w-2xl mx-auto">
                <!--carousel start-->
                <div id="default-carousel" class="relative drop-shadow-2xl" data-carousel="slide">
@@ -77,7 +77,7 @@ class="bg-[#D6EEF5]"
 
         <!-- Kotak Pertama -->
         <div class="justify-center p-5">
-            <div class="relative flex mb-6 shadow-lg rounded-lg bg-white border border-black">
+            <div class="relative flex p-4 shadow-lg rounded-lg bg-white border border-black h-54 w-60">
                 <div class="">
                     <div class="relative w-full m-auto pl-15 pr-15">
                         <a href="/ongoing"
@@ -98,7 +98,7 @@ class="bg-[#D6EEF5]"
 
         <!-- Kotak Kedua -->
         <div class="justify-center p-5">
-            <div class="relative flex mb-6 shadow-lg rounded-lg bg-white border border-black">
+            <div class="relative flex p-4 shadow-lg rounded-lg bg-white border border-black h-54 w-60">
                 <div class="">
                     <div class="relative w-full m-auto pl-15 pr-15">
                         <a href="/ongoing"
@@ -108,7 +108,7 @@ class="bg-[#D6EEF5]"
                         <div class="flex justify-center pb-2">
                             <button
                                 class="bg-[#737373] hover:bg-[#6A6A6A] text-white font-semibold text-xs py-1 px-20 rounded-md">
-                                <a href="/jadwal">
+                                <a href="/jadwal-pickup">
                                     GO >
                             </button>
                         </div>
@@ -119,17 +119,17 @@ class="bg-[#D6EEF5]"
 
         <!-- Kotak Ketiga -->
         <div class="justify-center p-5">
-            <div class="relative flex mb-6 shadow-lg rounded-lg bg-white border border-black">
+            <div class="relative flex p-4 shadow-lg rounded-lg bg-white border border-black h-60 w-60">
                 <div class="">
-                    <div class="relative w-full m-auto pl-15 pr-15">
+                    <div class="relative w-full ml-2 mr-0">
                         <a href="/ongoing"
-                            class="justify-center pt-2 text-base text-black flex group-hover:text-primary "><img
-                                src="{{ asset('image/exchange.png') }}" class="w-32"></img></a>
-                        <p class="text-center m-auto p-1 text-xs">Informasi Tentang Jadwal Penjemputan Sampah.</p>
+                            class="justify-center pt-2 text-base text-black flex group-hover:text-primary">
+                            <img src="{{ asset('image/exchange.png') }}" class="w-32"></img></a>
+                            <p class="text-center m-auto p-1 text-xs pb-2">Informasi Tentang Penukaran Poin</p>
                         <div class="flex justify-center pb-2">
                             <button
                                 class="bg-[#737373] hover:bg-[#6A6A6A] text-white font-semibold text-xs py-1 px-20 rounded-md">
-                                <a href="/jadwal">
+                                <a href="/exchange">
                                     GO >
                             </button>
                         </div>
