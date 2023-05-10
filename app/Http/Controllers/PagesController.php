@@ -169,10 +169,18 @@ class PagesController extends Controller
             'title' => 'About Us',
         ]);
     }
+
     public function pricelist()
     {
         return view('user.pricelist', [
             'title' => 'Price List',
+        ]);
+    }
+
+    public function jadwalPickup()
+    {
+        return view('user.jadwal-pickup', [
+            'title' => 'Jadwal Pickup Sampah',
         ]);
     }
 }
