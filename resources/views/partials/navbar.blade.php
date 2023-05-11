@@ -34,7 +34,7 @@
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Jadwal Pickup</a>
                         </li>
                         <li class="group">
-                            <a href="/exchange"
+                            <a href="/tukarpoin"
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Exchange</a>
                         </li>
                         <li class="group">
@@ -54,6 +54,7 @@
 
     </div>
 </header>
+<div class="absolute top-15 right-12 h-7 w-10 text-xl bg-white flex justify-center rounded "> ${{ auth()->user()->poin }} </div>
 
 @elseif(auth()->user()->role == '1')
 <header class="relative inset-x-0 bottom-0">
@@ -82,22 +83,18 @@
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary ">Pickup</a>
                         </li>
                         <li class="group">
-                            <a href="/pricelist"
-                                class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Pricelist</a>
-                        </li>
-                        <li class="group">
-                            <a href="/pickuptime"
+                            <a href="/jadwal-pickup"
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Jadwal Pickup</a>
                         </li>
                         <li class="group">
-                            <a href="/exchange"
+                            <a href="/ongoing"
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Exchange</a>
                         </li>
-                        <li class="group">
-                            <a href="/aboutus"
-                                class="text-base text-black py-2 mx-8 flex group-hover:text-primary">About Us</a>
-                        </li>
                     </div>
+                    <li class="group">
+                            <a href="/manageusers"
+                                class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Manage User</a>
+                        </li>
                 </ul>
             </nav>
         </div>
@@ -110,6 +107,7 @@
 
     </div>
 </header>
+
 
 @elseif(auth()->user()->role == '2')
 <header class="relative inset-x-0 bottom-0">
@@ -138,11 +136,11 @@
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary ">Pickup</a>
                         </li>
                         <li class="group">
-                            <a href="/pickuptime"
+                            <a href="/jadwal-pickup"
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Jadwal Pickup</a>
                         </li>
                         <li class="group">
-                            <a href="/exchange"
+                            <a href="/tukarpoin"
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Exchange</a>
                         </li>
                     </div>
@@ -158,6 +156,8 @@
 
     </div>
 </header>
+<!-- show current poin -->
+<div class="absolute top-15 right-12 h-7 w-10 text-xl bg-white flex justify-center rounded "> ${{ auth()->user()->poin }} </div>
 
 @endauth
 @else
