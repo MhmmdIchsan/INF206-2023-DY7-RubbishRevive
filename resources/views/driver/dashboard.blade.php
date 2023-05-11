@@ -80,11 +80,11 @@
 
             <ul class="lg:flex justify-center">
                 <li class="group">
-                    <a href="/history" class="text-base text-black py-5 flex group-hover:text-primary  w-40 h-40"><img
+                    <a href="/pickup.history" class="text-base text-black py-5 flex group-hover:text-primary  w-40 h-40"><img
                             src="{{ asset('image/history.png') }}" class="scale-75 object-contain"></img></a>
                 </li>
                 <li class="group">
-                    <a href="/ongoing" class="text-base text-black py-5 flex group-hover:text-primary w-40 h-40 "><img
+                    <a href="/myprofile" class="text-base text-black py-5 flex group-hover:text-primary w-40 h-40 "><img
                             src="{{ asset('image/AvatarIcon.png') }}" class="scale-75 object-contain"></img></a>
                 </li>
                 <li class="group">

@@ -5,13 +5,13 @@
                 <a href="#" class="mr-4 hover:underline md:mr-6 ">Follow us:</a>
             </li>
             <li class="group">
-                <a href="https://github.com/MhmmdIchsan/tesrpl/" class=""><img src="{{ asset('image/Instagram.png') }}"class="scale-25"></img></a>
+                <a href="https://github.com/MhmmdIchsan/INF206-2023-DY7-RubbishRevive" class=""><img src="{{ asset('image/Instagram.png') }}"class="scale-25"></img></a>
             </li>
             <li class="group">
-                <a href="www.github.com" class=""><img src="{{ asset('image/Github.png') }}" class="scale-25"></img></a>
+                <a href="https://github.com/MhmmdIchsan/INF206-2023-DY7-RubbishRevive" class=""><img src="{{ asset('image/Github.png') }}" class="scale-25"></img></a>
             </li>
             <li class="group">
-                <a href="www.twitter.com" class=""><img src="{{ asset('image/Twitter.png') }}"class="scale-25"></img></a>
+                <a href="https://github.com/MhmmdIchsan/INF206-2023-DY7-RubbishRevive" class=""><img src="{{ asset('image/Twitter.png') }}"class="scale-25"></img></a>
             </li>
         </ul>
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">Rubbish Revive© 2023
