@@ -77,9 +77,9 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
     Route::get('/pricelist', [PagesController::class, 'pricelist'])->middleware('auth');
     Route::get('/jadwal-pickup', [PagesController::class, 'jadwalPickup'])->middleware('auth');
 
-
-
-
+    // Admin
+    Route::resource('/manageusers', UserController::class);
+    // Admin End here
     // Route ini akan mengarahkan ke halaman logout
 // url: yang akhiranya adalah /logout akan diarahkan ke halaman logout
 // jika user sudah logout maka akan diarahkan ke halaman login dan session akan berhenti
