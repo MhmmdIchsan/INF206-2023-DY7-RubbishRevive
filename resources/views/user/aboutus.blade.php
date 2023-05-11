@@ -61,9 +61,7 @@ class="bg-[#D6EEF5]"
                 </div>
             </div>
 
-            <!--
-
-            Profile Card for Laila Asrin 
+            <!-- Profile Card for Laila Asrin -->
             <div class="bg-white shadow-md rounded-md overflow-hidden text-sm h-60 text-center">
                 <img class="w-full h-40 object-cover" src="{{ asset('image/lailaprofile.jpeg') }}" alt="Laila Asrin">
                 <div class="p-4">
@@ -72,7 +70,7 @@ class="bg-[#D6EEF5]"
                 </div>
             </div>
 
-            Profile Card for Tyara Raynasari 
+            <!-- Profile Card for Tyara Raynasari -->
             <div class="bg-white shadow-md rounded-md overflow-hidden text-sm h-60 text-center">
                 <img class="w-full h-40 object-cover" src="{{ asset('image/tyaraprofile.jpeg') }}"
                     alt="Tyara Raynasari">
@@ -82,7 +80,7 @@ class="bg-[#D6EEF5]"
                 </div>
             </div>
 
-             Profile Card for Nabilah Qurratul Annisa 
+            <!-- Profile Card for Nabilah Qurratul Annisa -->
             <div class="bg-white shadow-md rounded-md overflow-hidden text-sm h-60 text-center">
                 <img class="w-full h-40 object-cover" src="{{ asset('image/nabilaprofile.jpeg') }}"
                     alt="Nabilah Qurratul Annisa">
@@ -93,7 +91,6 @@ class="bg-[#D6EEF5]"
             </div>
         </div>
     </div>
--->
 </section>
 
 @endsection
