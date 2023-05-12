@@ -7,55 +7,78 @@ class="bg-[#D6EEF5]"
 
 @section('content')
 
-<section id="home" class="pt-24 ">
+<section id="home" class="pt-20 ">
     <div class="container content-center')">
         <div class="flex flex-wrap ">
             <div class="w-full self-center px-4 text-center ">
-                <ul class="lg:flex justify-center">
+            <ul class="lg:flex justify-center">
                     <li class="group">
-                        <a href="/history" class="text-base text-black py-5 flex group-hover:text-primary ">
-                            <img src="{{ asset('image/history.png') }}" class="scale-100"></img></a>
+                        <a href="/history" class="text-base text-black py-5 flex group-hover:text-primary "><img
+                                src="{{ asset('image/history.png') }}" class="scale-100"></img></a>
                     </li>
                 </ul>
-                <h1 class="block font-normal text-slate-800 text-5xl mt-1 lg:text-5xl text-[#9ADCF1]">HISTORY</h1>
+                <h1 class="block font-normal text-slate-800 text-5xl mt-1 lg:text-5xl text-[#9ADCF1]">History</h1>
             </div>
         </div>
     </div>
 </section>
+<div class="flex flex-warp justify-center">
+    <div class="-m-1.5 overflow-x-auto">
+        <div class="p-1.5 min-w-full inline-block align-middle">
+            <div class="overflow-hidden py-5">
 
-<!-- make card -->
-<div class="flex flex-wrap justify-center pt-5">
-    <div class="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 px-4">
-        <div class="relative flex flex-col min-w-0 break-words bg-[#ADFF2F] w-full mb-6 shadow-lg rounded-lg">
-            <div class="px-4 py-5 flex-auto">
-                <div class="text-center">
-                    <p class="text-xs text-[#959595]"> COMPLETE | Menukar Voucher Menjadi Pulsa </p>
-                    <p class="font-bold text-2xl text-[#737373]"> 9, February 2023 </p>
-                    <p class="text-center text-[#737373]"> -50 Poin</p>
+                @forelse ($pickups as $pickup)
+                <div
+                    class="flex flex-col mb-5 items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
+                    <div class="m-5">
+                    @if ($pickup->image)
+                    <img src="{{ asset ('storage/' . $pickup->image) }}" alt="image" class="w-25 h-25 rounded-lg">
+                    @else
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                        src="/docs/images/blog/image-4.jpg" alt="">
+                    @endif
+                    </div>
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">{{ $pickup->nama }}</h5>
+                        <h6 class="mb-2 text-m tracking-tight text-gray-900">{{ $pickup->status }}</h6>
+                        <p class="mb-2 text-sm font-normal text-gray-700 dark:text-gray-400">{{ $pickup->kecamatan }}</p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $pickup->alamat }}</p>
+                    </div>
+                    <div class="items-center px-5">
+                        <form action="{{ route('pickup.destroy',$pickup->id) }}" method="POST">
+                            <a class="btn btn-primary text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" href="{{ route('pickup.show',$pickup->id) }}">Show</a>
+                        </form>
+                    </div>
                 </div>
+                @empty
+                <div class="alert alert-danger">
+                    Data Request Pickup belum Tersedia.
+                </div>
+                @endforelse
+                {{ $pickups->links() }}
             </div>
         </div>
     </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-<!-- make card 2-->
-<div class="flex flex-wrap justify-center pt-5">
-    <div class="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 px-4">
-        <div class="relative flex flex-col min-w-0 break-words bg-[#FFFF00] w-full mb-6 shadow-lg rounded-lg">
-            <div class="px-4 py-5 flex-auto">
-                <div class="text-center">
-                    <p class="text-xs text-[#959595]"> COMPLETE | Sampah Telah Diambil oleh Driver </p>
-                    <p class="font-bold text-2xl text-[#737373]"> 16, January 2023 </p>
-                    <p class="text-center text-[#737373]"> +50 Poin</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<script>
+    //message with toastr
+    @if(session() -> has('success'))
 
+    toastr.success('{{ session('
+        success ') }}', 'BERHASIL!');
 
+    @elseif(session() -> has('error'))
 
+    toastr.error('{{ session('
+        error ') }}', 'GAGAL!');
+
+    @endif
+
+</script>
 <!-- End Hero Section -->
-
 @endsection
