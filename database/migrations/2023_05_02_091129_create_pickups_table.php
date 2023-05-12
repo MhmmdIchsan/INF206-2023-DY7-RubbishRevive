@@ -12,16 +12,25 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pickups', function (Blueprint $table) {
+            
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string("nama");
+            $table->string("kecamatan");
             $table->string("alamat");
             $table->string("phone");
             $table->string("email");
             $table->string("jenissampah");
             $table->string("beratsampah");
-            $table->string("status")->default("pending");
+            $table->string("harga")->nullable();
+            $table->string("poin")->nullable();
+            $table->string("status")->default(0);
+            $table->string("image")->nullable();
+            $table->string("driver_id")->nullable();
+            $table->string("driver_name")->nullable();
             $table->timestamps();
         });
+
     }
 
     /**
