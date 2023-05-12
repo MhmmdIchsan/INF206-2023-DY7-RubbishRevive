@@ -7,7 +7,7 @@ class="bg-[#D6EEF5]"
 
 @section('content')
 
-<section id="home" class="pt-24 ">
+<section id="home" class="pt-20 ">
     <div class="container content-center')">
         <div class="flex flex-wrap ">
             <div class="w-full self-center px-4 text-center ">
@@ -27,58 +27,61 @@ class="bg-[#D6EEF5]"
     </div>
 </section>
 <div class="flex flex-warp justify-center">
-<div class="-m-1.5 overflow-x-auto">
-<div class="p-1.5 min-w-full inline-block align-middle">
-<div class="overflow-hidden">
-    <div class="flex justify-center pt-5">
-        <a href="{{ route('pickup.create') }}" class="btn btn-md btn-success text-white m-2 p-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Request Pickup</a>
-</div>
-<table class="border min-w-full text-left text-sm font-light table-auto">
-            <thead class="border font-medium dark:border-neutral-500">
-                    <th scope="col" class="m-1 p-2">Nama</th>
-                    <th scope="col" class="m-1 p-2">Alamat</th>
-                    <th scope="col" class="m-1 p-2">Nomor Hp</th>
-                    <th scope="col" class="m-1 p-2">Email</th>
-                    <th scope="col" class="m-1 p-2">Jenis Sampah</th>
-                    <th scope="col" class="m-1 p-2">Berat Sampah</th>
-                    <th scope="col" class="m-1 p-2">Status</th>
-                    <th scope="col" class="m-1 p-2">Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
+    <div class="-m-1.5 overflow-x-auto">
+        <div class="p-1.5 min-w-full inline-block align-middle">
+            <div class="overflow-hidden">
+                <div class="flex justify-center pt-5">
+                    <a href="{{ route('pickup.create') }}"
+                        class="btn btn-md btn-success text-white m-2 p-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Request
+                        Pickup</a>
+                </div>
                 @forelse ($pickups as $pickup)
-                <tr class="border-b dark:border-neutral-500 hover:bg-stone-100 border">
-                    <td class="font-bold py-2 px-4 border-black text-center"">{{ $pickup->nama }}</td>
-                    <td class="whitespace-nowrap ">{{ $pickup->alamat }}</td>
-                    <td class="whitespace-nowrap ">{{ $pickup->phone }}</td>
-                    <td class="whitespace-nowrap ">{{ $pickup->email }}</td>
-                    <td class="whitespace-nowrap ">{{ $pickup->jenissampah }}</td>
-                    <td class="whitespace-nowrap ">{{ $pickup->beratsampah }}</td>
-                    <td class="whitespace-nowrap ">{{ $pickup->status }}</td>
-                    <td class="text-center">
-                        <form onsubmit="return confirm('Apakah Anda Yakin ?');"
-                            action="{{ route('pickup.destroy', $pickup->id) }}" method="POST">
-                            <a href="{{ route('pickup.show', $pickup->id) }}" class="btn btn-sm btn-dark text-white m-2 p-1 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">SHOW</a>
-                            <a href="{{ route('pickup.edit', $pickup->id) }}" class="btn btn-sm btn-primary text-white m-2 p-1 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">EDIT</a>
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-sm btn-danger focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm m-1 p-1 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">HAPUS</button>
-                        </form>
-                    </td>
-                </tr>
+                <div
+                    class="flex flex-col mb-5 items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
+                    <div class="m-5">
+                    @if ($pickup->image)
+                    <img src="{{ asset ('storage/' . $pickup->image) }}" alt="image" class="w-25 h-25 rounded-lg">
+                    @else
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                        src="/docs/images/blog/image-4.jpg" alt="">
+                    @endif
+                    </div>
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">{{ $pickup->nama }}</h5>
+                        <h6 class="mb-2 text-xl tracking-tight text-gray-900">{{ $pickup->status }}</h6>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $pickup->alamat }}</p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Driver : {{ $pickup->driver_id }} - {{ $pickup->driver_name }}</p>
+                    </div>
+                </div>
                 @empty
                 <div class="alert alert-danger">
                     Data Request Pickup belum Tersedia.
                 </div>
                 @endforelse
-            </tbody>
-        </table>
-        {{ $pickups->links() }}
+                {{ $pickups->links() }}
+
+                @forelse ($tukarpoin as $pickup)
+                <div
+                    class="flex flex-col mb-5 items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                        src="{{ asset('image/voucherpulsa.png') }}" alt="">
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">{{ $pickup->nama }}</h5>
+                        <h6 class="mb-2 text-xl tracking-tight text-gray-900">{{ $pickup->namahadiah }}</h6>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $pickup->status }}</p>
+                    </div>
+                </div>
+                
+                @empty
+                <div class="alert alert-danger">
+                    
+                @endforelse
+                
+            </div>
+        </div>
     </div>
-</div> 
 </div>
-</div>
-<!-- make card -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
