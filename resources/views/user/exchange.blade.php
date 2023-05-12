@@ -25,7 +25,7 @@
                             10 Poin
                         </p>
                         <div class="justify-end flex">
-                            <a href="/tukarPulsa10" type="button"
+                            <a href="/tukarPoin" type="button"
                                 class=" rounded bg-blue-700 px-1 pb-2 pt-2 text-xs font-medium 
       leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] 
       transition duration-150 ease-in-out hover:bg-primary-600 
@@ -49,7 +49,7 @@
                             20 Poin
                         </p>
                         <div class="justify-end flex">
-                            <a href="/tukarPulsa20" type="button"
+                            <a href="/tukarPoin" type="button"
                                 class=" rounded bg-blue-700 px-1 pb-2 pt-2 text-xs font-medium 
       leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] 
       transition duration-150 ease-in-out hover:bg-primary-600 
@@ -73,7 +73,7 @@
                             50 Poin
                         </p>
                         <div class="justify-end flex">
-                            <a href="/tukarPulsa50" type="button"
+                            <a href="/tukarPoin" type="button"
                                 class=" rounded bg-blue-700 px-1 pb-2 pt-2 text-xs font-medium 
       leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] 
       transition duration-150 ease-in-out hover:bg-primary-600 
@@ -97,7 +97,7 @@
                             100 Poin
                         </p>
                         <div class="justify-end flex">
-                            <a href="/tukarPulsa100" type="button"
+                            <a href="/tukarPoin" type="button"
                                 class=" rounded bg-blue-700 px-1 pb-2 pt-2 text-xs font-medium 
       leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] 
       transition duration-150 ease-in-out hover:bg-primary-600 
@@ -121,7 +121,7 @@
                             50 Poin
                         </p>
                         <div class="justify-end flex">
-                            <a href="/tukarListrik50" type="button"
+                            <a href="/tukarPoin" type="button"
                                 class=" rounded bg-blue-700 px-1 pb-2 pt-2 text-xs font-medium 
       leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] 
       transition duration-150 ease-in-out hover:bg-primary-600 
@@ -145,7 +145,7 @@
                             100 Poin
                         </p>
                         <div class="justify-end flex">
-                            <a href="/tukarListrik100" type="button"
+                            <a href="/tukarPoin" type="button"
                                 class=" rounded bg-blue-700 px-1 pb-2 pt-2 text-xs font-medium 
       leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] 
       transition duration-150 ease-in-out hover:bg-primary-600 
@@ -169,7 +169,7 @@
                             150 Poin
                         </p>
                         <div class="justify-end flex">
-                            <a href="/tukarListrik150" type="button"
+                            <a href="/tukarPoin" type="button"
                                 class=" rounded bg-blue-700 px-1 pb-2 pt-2 text-xs font-medium 
       leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] 
       transition duration-150 ease-in-out hover:bg-primary-600 
@@ -193,7 +193,7 @@
                             200 Poin
                         </p>
                         <div class="justify-end flex">
-                            <a href="/tukarListrik200" type="button"
+                            <a href="/tukarPoin" type="button"
                                 class=" rounded bg-blue-700 px-1 pb-2 pt-2 text-xs font-medium 
       leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] 
       transition duration-150 ease-in-out hover:bg-primary-600 
