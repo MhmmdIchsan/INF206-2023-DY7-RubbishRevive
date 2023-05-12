@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Models\User;
 
 class PagesController extends Controller
 {
     public function halamanUtama()
     {
         return view('index', [
-            'title' => 'Rubbish Revive'
+            'title' => 'Landing Page'
         ]);
     }
 
@@ -112,57 +113,6 @@ class PagesController extends Controller
         ]);
     }
 
-    public function tukarPulsa10()
-    {
-        return view('user.tukarPulsa10', [
-            'title' => 'Tukar',
-        ]);
-    }
-
-    public function tukarPulsa20()
-    {
-        return view('user.tukarPulsa20', [
-            'title' => 'Tukar',
-        ]);
-    }
-
-    public function tukarPulsa50()
-    {
-        return view('user.tukarPulsa50', [
-            'title' => 'Tukar',
-        ]);
-    }
-    public function tukarPulsa100()
-    {
-        return view('user.tukarPulsa100', [
-            'title' => 'Tukar',
-        ]);
-    }
-    public function tukarListrik50()
-    {
-        return view('user.tukarListrik50', [
-            'title' => 'Tukar',
-        ]);
-    }
-    public function tukarListrik100()
-    {
-        return view('user.tukarListrik100', [
-            'title' => 'Tukar',
-        ]);
-    }
-    public function tukarListrik150()
-    {
-        return view('user.tukarListrik150', [
-            'title' => 'Tukar',
-        ]);
-    }
-    public function tukarListrik200()
-    {
-        return view('user.tukarListrik200', [
-            'title' => 'Tukar',
-        ]);
-    }
-
     public function aboutus()
     {
         return view('user.aboutus', [
@@ -183,4 +133,5 @@ class PagesController extends Controller
             'title' => 'Jadwal Pickup Sampah',
         ]);
     }
+
 }
