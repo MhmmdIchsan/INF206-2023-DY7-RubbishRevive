@@ -22,7 +22,7 @@
 
                         <h1 class="mt-4 mb-2 text-xl font-bold">Botol Plastik</h1>
                         <p class="text-sm text-gray-600">
-                            Rp3000/kg
+                            5 poin /kg
                         </p>
                     </div>
                     <!--kotak kedua-->
@@ -33,7 +33,7 @@
 
                         <h1 class="mt-4 mb-2 text-xl font-bold">Botol Kaca</h1>
                         <p class="text-sm text-gray-600">
-                            Rp5000/kg
+                            5 poin /kg
                         </p>
                     </div>
                     <!--kotak ketiga-->
@@ -44,7 +44,7 @@
 
                         <h1 class="mt-4 mb-2 text-xl font-bold">Kantong Plastik</h1>
                         <p class="text-sm text-gray-600">
-                            Rp2000/kg
+                            3 poin /kg
                         </p>
                     </div>
                     <!--kotak keempat-->
@@ -55,7 +55,7 @@
 
                         <h1 class="mt-4 mb-2 text-xl font-bold">Kertas</h1>
                         <p class="text-sm text-gray-600">
-                            Rp1500/kg
+                            5 poin /kg
                         </p>
                     </div>
                     <!--kotak kelima-->
@@ -66,7 +66,7 @@
 
                         <h1 class="mt-4 mb-2 text-xl font-bold">Aluminium</h1>
                         <p class="text-sm text-gray-600">
-                            Rp7000/kg
+                            7 poin /kg
                         </p>
                     </div>
                     <!--kotak keenam-->
@@ -77,7 +77,7 @@
 
                         <h1 class="mt-4 mb-2 text-xl font-bold">Koran Bekas</h1>
                         <p class="text-sm text-gray-600">
-                            Rp2000/kg
+                            3 poin /kg
                         </p>
                     </div>
                     <!--kotak ketujuh-->
@@ -88,7 +88,7 @@
 
                         <h1 class="mt-4 mb-2 text-xl font-bold">Kaleng</h1>
                         <p class="text-sm text-gray-600">
-                            Rp5000/kg
+                            5 poin /kg
                         </p>
                     </div>
                     <!--kotak kedelapan-->
@@ -99,7 +99,18 @@
 
                         <h1 class="mt-4 mb-2 text-xl font-bold">Elektronik</h1>
                         <p class="text-sm text-gray-600">
-                            Rp10000/kg
+                            10 poin /kg
+                        </p>
+                    </div>
+                    <!--kotak kesembilan-->
+                    <div class="p-4 m-8 w-40 bg-white shadow-md rounded-xl">
+                        <picture class="rounded-lg block">
+                            <img src="{{ asset('image/sampahorganik.jpg') }}" class="w-40 h-40 object-cover" />
+                        </picture>
+
+                        <h1 class="mt-4 mb-2 text-xl font-bold">Sampah Organik</h1>
+                        <p class="text-sm text-gray-600">
+                            3 poin /kg
                         </p>
                     </div>
                 </div>

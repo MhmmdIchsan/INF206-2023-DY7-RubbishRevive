@@ -5,6 +5,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\auth\RegisterController;
 use App\Http\Controllers\PickupController;
+use App\Http\Controllers\UserController;
 
 
 
@@ -32,7 +33,7 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
     Route::get('/informasi-jenis-plastik', [PagesController::class, 'informasi']);
     Route::get('/informasi-jenis-kompos', [PagesController::class, 'informasi2']);
     Route::get('/informasi-jenis-kertas', [PagesController::class, 'informasi3']);
-    Route::get('/informasi-jenis-anorganik', [PagesController::class, 'informasi3']);
+    Route::get('/informasi-jenis-anorganik', [PagesController::class, 'informasi4']);
 
     // Route ini akan mengarahkan ke halaman login
 // url: yang akhiranya adalah /loginpage akan diarahkan ke halaman login
@@ -74,10 +75,11 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
     Route::get('/tukarListrik200', [PagesController::class, 'tukarListrik200'])->middleware('auth');
     Route::get('/aboutus', [PagesController::class, 'aboutus'])->middleware('auth');
     Route::get('/pricelist', [PagesController::class, 'pricelist'])->middleware('auth');
+    Route::get('/jadwal-pickup', [PagesController::class, 'jadwalPickup'])->middleware('auth');
 
-
-
-
+    // Admin
+    Route::resource('/manageusers', UserController::class);
+    // Admin End here
     // Route ini akan mengarahkan ke halaman logout
 // url: yang akhiranya adalah /logout akan diarahkan ke halaman logout
 // jika user sudah logout maka akan diarahkan ke halaman login dan session akan berhenti

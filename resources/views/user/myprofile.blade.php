@@ -13,7 +13,7 @@ class="bg-[#D6EEF5]"
             <div class="w-full px-4 text-center ">
                 <ul class="lg:flex justify-center">
                     <li class="group">
-                        <a href="/history" class="text-base text-black py-5 flex group-hover:text-primary "><img
+                        <a href="pickup.history" class="text-base text-black py-5 flex group-hover:text-primary "><img
                                 src="{{ asset('image/history.png') }}" class="scale-75"></img></a>
                     </li>
                     <li class="group">
@@ -32,7 +32,7 @@ class="bg-[#D6EEF5]"
                 <div class="text-center">
                     <p>Username: {{ Auth::user()->name }}</p>
                     <p>Email: {{ Auth::user()->email }}</p>
-                    <p>Phone Number: {{ Auth::user()->phone }}</p>
+                    <p>Role: {{ Auth::user()->role }}</p>
                 </div>
                 <button class="bg-[#737373] hover:bg-[#6A6A6A] text-white font-bold py-2 px-4 rounded-md">
                     <a href="/logout">

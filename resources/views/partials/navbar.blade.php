@@ -1,7 +1,7 @@
 @auth
 @if(auth()->user()->role == '0')
 <header class="relative inset-x-0 bottom-0">
-    <div class="flex inset-x-0 relative w-auto relative bg-[#A7D1DD] flex justify-between shadow-xl">
+    <div class="flex inset-x-0 relative w-auto bg-[#A7D1DD] justify-between shadow-xl">
         <div class="px-4 flex justify-start">
             <a href="/dashboard" class="font-bold text-lg text-primary block py-1">
                 <img src="{{ asset('image/logo.png') }}" alt="logo" class="w-20">
@@ -16,7 +16,7 @@
             </button>
 
             <nav id="nav-menu"
-                class="hidden relative inset-x-0 w-auto py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none  ">
+                class="hidden relative inset-x-0 py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none  ">
                 <ul class="block lg:flex ">
 
 
@@ -30,11 +30,11 @@
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Pricelist</a>
                         </li>
                         <li class="group">
-                            <a href="/pickuptime"
+                            <a href="/jadwal-pickup"
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Jadwal Pickup</a>
                         </li>
                         <li class="group">
-                            <a href="/exchange"
+                            <a href="/tukarpoin"
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Exchange</a>
                         </li>
                         <li class="group">
@@ -54,10 +54,11 @@
 
     </div>
 </header>
+<div class="absolute top-15 right-12 h-7 w-10 text-xl bg-white flex justify-center rounded "> ${{ auth()->user()->poin }} </div>
 
 @elseif(auth()->user()->role == '1')
 <header class="relative inset-x-0 bottom-0">
-    <div class="flex inset-x-0 relative w-auto relative bg-[#A7D1DD] flex justify-between shadow-xl">
+    <div class="flex inset-x-0 relative w-auto bg-[#A7D1DD] justify-between shadow-xl">
         <div class="px-4 flex justify-start">
             <a href="/dashboard" class="font-bold text-lg text-primary block py-1">
                 <img src="{{ asset('image/logo.png') }}" alt="logo" class="w-20">
@@ -72,7 +73,7 @@
             </button>
 
             <nav id="nav-menu"
-                class="hidden relative inset-x-0 w-auto py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none  ">
+                class="hidden relative inset-x-0 py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none  ">
                 <ul class="block lg:flex ">
 
 
@@ -82,22 +83,18 @@
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary ">Pickup</a>
                         </li>
                         <li class="group">
-                            <a href="/pricelist"
-                                class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Pricelist</a>
-                        </li>
-                        <li class="group">
-                            <a href="/pickuptime"
+                            <a href="/jadwal-pickup"
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Jadwal Pickup</a>
                         </li>
                         <li class="group">
-                            <a href="/exchange"
+                            <a href="/ongoing"
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Exchange</a>
                         </li>
-                        <li class="group">
-                            <a href="/aboutus"
-                                class="text-base text-black py-2 mx-8 flex group-hover:text-primary">About Us</a>
-                        </li>
                     </div>
+                    <li class="group">
+                            <a href="/manageusers"
+                                class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Manage User</a>
+                        </li>
                 </ul>
             </nav>
         </div>
@@ -110,10 +107,11 @@
 
     </div>
 </header>
+
 
 @elseif(auth()->user()->role == '2')
 <header class="relative inset-x-0 bottom-0">
-    <div class="flex inset-x-0 relative w-auto relative bg-[#A7D1DD] flex justify-between shadow-xl">
+    <div class="flex inset-x-0 relative w-auto bg-[#A7D1DD] justify-between shadow-xl">
         <div class="px-4 flex justify-start">
             <a href="/dashboard" class="font-bold text-lg text-primary block py-1">
                 <img src="{{ asset('image/logo.png') }}" alt="logo" class="w-20">
@@ -128,7 +126,7 @@
             </button>
 
             <nav id="nav-menu"
-                class="hidden relative inset-x-0 w-auto py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none  ">
+                class="hidden relative inset-x-0 py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none  ">
                 <ul class="block lg:flex ">
 
 
@@ -138,11 +136,11 @@
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary ">Pickup</a>
                         </li>
                         <li class="group">
-                            <a href="/pickuptime"
+                            <a href="/jadwal-pickup"
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Jadwal Pickup</a>
                         </li>
                         <li class="group">
-                            <a href="/exchange"
+                            <a href="/tukarpoin"
                                 class="text-base text-black py-2 mx-8 flex group-hover:text-primary">Exchange</a>
                         </li>
                     </div>
@@ -158,11 +156,13 @@
 
     </div>
 </header>
+<!-- show current poin -->
+<div class="absolute top-15 right-12 h-7 w-10 text-xl bg-white flex justify-center rounded "> ${{ auth()->user()->poin }} </div>
 
 @endauth
 @else
 <header class="relative inset-x-0 bottom-0">
-    <div class="flex inset-x-0 relative w-auto relative bg-[#A7D1DD] flex justify-between shadow-xl">
+    <div class="flex inset-x-0 relative w-auto bg-[#A7D1DD] justify-between shadow-xl">
         <div class="px-4 flex justify-start">
             <a href="/dashboard" class="font-bold text-lg text-primary block py-1">
                 <img src="{{ asset('image/logo.png') }}" alt="logo" class="w-20">
