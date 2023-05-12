@@ -80,7 +80,7 @@ class="bg-[#D6EEF5]"
             <div class="relative flex p-4 shadow-lg rounded-lg bg-white border border-black h-54 w-60">
                 <div class="">
                     <div class="relative w-full m-auto pl-15 pr-15">
-                        <a href="/ongoing"
+                        <a href="/pickup"
                             class="justify-center pt-2 text-base text-black flex group-hover:text-primary "><img
                                 src="{{ asset('image/Pickup trash.png') }}" class="w-32"></img></a>
                         <p class="text-center m-auto p-1 text-xs">Layanan Menjemput Sampah ke Rumah Anda.</p>
@@ -101,7 +101,7 @@ class="bg-[#D6EEF5]"
             <div class="relative flex p-4 shadow-lg rounded-lg bg-white border border-black h-54 w-60">
                 <div class="">
                     <div class="relative w-full m-auto pl-15 pr-15">
-                        <a href="/ongoing"
+                        <a href="/jadwal-pickup"
                             class="justify-center pt-2 text-base text-black flex group-hover:text-primary "><img
                                 src="{{ asset('image/Jadwal Pickup.png') }}" class="w-32"></img></a>
                         <p class="text-center m-auto p-1 text-xs">Informasi Tentang Jadwal Penjemputan Sampah.</p>
@@ -122,7 +122,7 @@ class="bg-[#D6EEF5]"
             <div class="relative flex p-4 shadow-lg rounded-lg bg-white border border-black h-60 w-60">
                 <div class="">
                     <div class="relative w-full ml-2 mr-0">
-                        <a href="/ongoing"
+                        <a href="/tukarpoin"
                             class="justify-center pt-2 text-base text-black flex group-hover:text-primary">
                             <img src="{{ asset('image/exchange.png') }}" class="w-32"></img></a>
                             <p class="text-center m-auto p-1 text-xs pb-2">Informasi Tentang Penukaran Poin</p>
