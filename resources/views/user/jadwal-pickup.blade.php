@@ -7,7 +7,7 @@ class="bg-[#D6EEF5]"
 
 @section('content')
 
-<div class="relative flex flex-wrap">
+<div class="relative flex flex-wrap ">
     <div class="flex justify-between px-4 mx-auto max-w-screen-7xl">
         <div class="absolute flex justify-center items-center left-0 right-0 m-auto w-100 h-12 mt-10">
             <p class="text-3xl font-bold leading-none tracking-tight text-[#737373] md:text-3xl lg:text-3xl dark:text-white"> Jadwal Pickup Sampah </p>
@@ -83,7 +83,6 @@ class="bg-[#D6EEF5]"
             </div>
         </div>
     </div>
-
 </div>
 
 @endsection
