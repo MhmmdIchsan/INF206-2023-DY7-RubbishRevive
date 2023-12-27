@@ -2,12 +2,12 @@
 
 
 @section('body')
-    class="bg-[#D6EEF5]"
+class="bg-gradient-to-tl from-cyan-500"
 @endsection
 
 @section('content')
     <section id="home" class="pt-10">
-        <div class="container">
+        <div class="container mx-auto">
             <div class="flex flex-wrap ">
                 <div class="w-full px-4 text-center ">
                     <h1 class=" pt-1 font-normal text-slate-600 mt-1 text-3xl text-[#9ADCF1]">

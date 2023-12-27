@@ -2,7 +2,7 @@
 
 
 @section('body')
-class="bg-[#D6EEF5]"
+class="bg-gradient-to-tl from-cyan-500"
 @endsection
 
 @section('content')
@@ -138,4 +138,19 @@ class="bg-[#D6EEF5]"
             </div>
         </div>
     </div>
+
+    <script>
+        toastr.options = {
+            positionClass: 'toast-top-right',
+            closeButton: true,
+            progressBar: true,
+        };
+
+        @if(session()->has('success'))
+            toastr.success('{{ session('success') }}', 'Success!');
+        @elseif(session()->has('error'))
+            toastr.error('{{ session('error') }}', 'Error!');
+        @endif
+    </script>
+    
     @endsection

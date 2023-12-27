@@ -2,7 +2,7 @@
 
 
 @section('body')
-class="bg-[#D6EEF5]"
+class="bg-gradient-to-tl from-cyan-500"
 @endsection
 
 @section('content')
