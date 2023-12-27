@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('body')
-class="bg-[#D6EEF5]"
+class="bg-gradient-to-tl from-cyan-500"
 @endsection
 
 @section('content')
@@ -39,4 +39,19 @@ class="bg-[#D6EEF5]"
     </div>
 </form>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+    // Display Toastr messages for user editing
+    @if(session('success'))
+        toastr.success('{{ session('success') }}', 'BERHASIL!');
+    @endif
+
+    @if(session('error'))
+        toastr.error('{{ session('error') }}', 'GAGAL!');
+    @endif
+</script>
 @endsection

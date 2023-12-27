@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\User;
+use Illuminate\Http\RedirectResponse;
 
 class UserController extends Controller
 {
@@ -27,7 +28,7 @@ class UserController extends Controller
         ]);
     }
 
-    public function update (Request $request, $id)
+    public function update (Request $request, $id): RedirectResponse
     {
         // Validate the request
         $request->validate([
@@ -45,8 +46,11 @@ class UserController extends Controller
         $user->role = $request->get('role');
         $user->save();
         
+        // Redirect with toastr message
+        return redirect()->route('manageusers.index')->with('success', 'User updated successfully');
+        
         // Redirect to the users index page and display message
-        Alert::success('Success', 'User updated successfully');
-        return redirect()->route('manageusers.index');
+        // Alert::success('Success', 'User updated successfully');
+        // return redirect()->route('manageusers.index');
     }
 }
