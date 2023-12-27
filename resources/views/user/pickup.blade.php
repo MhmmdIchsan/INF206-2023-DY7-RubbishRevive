@@ -2,31 +2,19 @@
 
 
 @section('body')
-class="bg-[#D6EEF5]"
+class="bg-gradient-to-tl from-cyan-500"
 @endsection
 
 @section('content')
 
-<section id="home" class="pt-20 ">
-    <div class="container content-center')">
-        <div class="flex flex-wrap ">
-            <div class="w-full self-center px-4 text-center ">
-                
-                <h1 class="block font-normal text-slate-800 text-5xl mt-1 lg:text-5xl text-[#9ADCF1]">Pick-up Request</h1>
-                <div class="card border-0 shadow-sm rounded">
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="flex flex-warp justify-center">
+<div class="select-none flex flex-warp justify-center ">
     <div class="overflow-x-auto">
         <div class="p-1.5 min-w-full inline-block align-middle">
             <div class="overflow-hidden">
-                <div class="flex justify-center pt-5">
+                <div class="flex flex-col justify-center pt-5">
+                <h1 class="block font-normal text-slate-800 text-5xl mt-1 lg:text-5xl text-[#9ADCF1] text-center my-5">Pick-up Request</h1>
                     <a href="{{ route('pickup.create') }}"
-                        class="btn btn-md btn-success text-white m-2 p-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Request
+                        class="btn btn-md btn-success text-center text-white m-2 p-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mb-5">Request
                         Pickup</a>
                 </div>
                 @forelse ($pickups as $pickup)
@@ -44,6 +32,8 @@ class="bg-[#D6EEF5]"
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">{{ $pickup->nama }}</h5>
                         <h6 class="mb-2 text-xl tracking-tight text-gray-900">{{ $pickup->status }}</h6>
                         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $pickup->alamat }}</p>
+                    </div>
+                    <div class="items-center px-5">
                     </div>
                 </div>
                 <!-- make button to show harga -->

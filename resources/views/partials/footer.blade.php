@@ -1,4 +1,4 @@
-<footer class="relative inset-x-0 bottom-0 p-2 border-t border-[#15104D] bg-[#ECFBFF]">
+<footer class="relative inset-x-0 bottom-0 p-2 border-t border-[#15104D] bg-gradient-to-r from-cyan-300 to-cyan-100">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <ul class="flex mr-auto mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
             <li>

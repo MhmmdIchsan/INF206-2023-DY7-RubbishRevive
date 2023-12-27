@@ -2,13 +2,13 @@
 
 
 @section('body')
-class="bg-[#D6EEF5]"
+class="bg-gradient-to-tl from-cyan-500"
 @endsection
 
 @section('content')
 
 <section id="home" class="pt-20 ">
-    <div class="container content-center')">
+    <div class="container content-center mx-auto">
         <div class="flex flex-wrap ">
             <div class="w-full self-center px-4 text-center ">
             <ul class="lg:flex justify-center">

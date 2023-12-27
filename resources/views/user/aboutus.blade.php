@@ -2,13 +2,13 @@
 
 
 @section('body')
-class="bg-[#D6EEF5]"
+class="bg-gradient-to-tl from-cyan-500"
 @endsection
 
 @section('content')
 
 <section id="home" class=" ">
-    <div class="container content-center')">
+    <div class="container content-center mx-auto">
         <div class="flex flex-wrap">
             <div class="w-full self-center text-center pt-14">
                 <img src="{{ asset('image/logo.png') }}" alt="logo" class="pb-0 w-1/4 h-359 w-459 mx-auto">
