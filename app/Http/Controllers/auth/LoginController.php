@@ -6,7 +6,7 @@ namespace app\Http\Controllers\auth;
  use RealRashid\SweetAlert\Facades\Alert;
  use Illuminate\Support\Facades\Auth;
   
- class loginController extends Controller
+ class LoginController extends Controller
  {
      /**
       * Display a listing of the resource.
