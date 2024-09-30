@@ -17,7 +17,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.0'  # Use the required PHP version
+        php-version: '8.2.0'  # Use the required PHP version
         extensions: mbstring, intl  # Add other necessary PHP extensions
 
     - name: Cache Composer Dependencies
