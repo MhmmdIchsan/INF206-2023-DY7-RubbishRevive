@@ -1,5 +1,5 @@
 # Menggunakan image PHP dengan FPM dan Alpine sebagai base image
-FROM php:8.1-fpm-alpine
+FROM php:8.2-fpm-alpine
 
 # Mengatur direktori kerja
 WORKDIR /var/www/html
@@ -26,8 +26,8 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Copy file composer.json dan composer.lock ke dalam container
 COPY composer.json composer.lock ./
 
-# Install dependensi PHP
-RUN composer install --no-dev --optimize-autoloader
+# Jalankan composer install di langkah build
+RUN composer install --no-dev --optimize-autoloader || exit 1
 
 # Copy seluruh source code aplikasi Laravel ke container
 COPY . .
