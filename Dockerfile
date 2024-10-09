@@ -36,11 +36,16 @@ RUN composer install --no-dev --optimize-autoloader --no-scripts --prefer-dist
 # Salin seluruh source code Laravel ke container
 COPY . .
 
-# Generate key dan pastikan permission storage dan bootstrap/cache sudah benar
-RUN php artisan key:generate && \
-    chmod -R 777 storage bootstrap/cache
+# Pastikan direktori storage dan bootstrap/cache ada
+RUN mkdir -p storage bootstrap/cache
 
-# Install Node.js dependencies dan build asset frontend (seperti di GitHub Actions)
+# Generate key
+RUN php artisan key:generate || echo "Failed to generate app key"
+
+# Set permission untuk folder storage dan bootstrap/cache
+RUN chmod -R 777 storage bootstrap/cache
+
+# Install Node.js dependencies dan build asset frontend
 RUN npm install && npm run build
 
 # Expose port 9000 dan jalankan PHP-FPM
