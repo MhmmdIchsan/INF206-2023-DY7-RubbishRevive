@@ -1,44 +1,48 @@
-# Menggunakan image PHP dengan FPM dan Alpine sebagai base image
-FROM php:8.2-fpm-alpine
+# Menggunakan image resmi PHP 8.2 sebagai base
+FROM php:8.2-fpm
 
-# Mengatur direktori kerja
-WORKDIR /var/www/html
-
-# Install dependensi sistem yang dibutuhkan
-RUN apk add --no-cache \
-    git \
-    unzip \
+# Install dependensi sistem yang dibutuhkan, PHP extensions, dan Composer
+RUN apt-get update && apt-get install -y \
+    build-essential \
     libpng-dev \
-    libjpeg-turbo-dev \
-    freetype-dev \
-    oniguruma-dev \
-    libxml2-dev \
+    libjpeg62-turbo-dev \
+    libfreetype6-dev \
+    locales \
     zip \
-    curl
-
-# Install ekstensi PHP yang dibutuhkan oleh Laravel
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo pdo_mysql mbstring exif pcntl bcmath xml
+    jpegoptim optipng pngquant gifsicle \
+    vim \
+    unzip \
+    git \
+    curl \
+    libonig-dev \
+    libxml2-dev \
+    libzip-dev \
+    nodejs \
+    npm \
+    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd zip
 
 # Install Composer
-COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.6 /usr/bin/composer /usr/bin/composer
 
-# Copy file composer.json dan composer.lock ke dalam container
+# Set working directory
+WORKDIR /var/www/html
+
+# Salin file composer.json dan composer.lock sebelum mengcopy seluruh source code
 COPY composer.json composer.lock ./
 
-# Jalankan composer install di langkah build
-RUN composer install --no-dev --optimize-autoloader || exit 1
+# Install dependensi Composer
+RUN composer install --no-dev --optimize-autoloader --no-scripts --prefer-dist
 
-# Copy seluruh source code aplikasi Laravel ke container
+# Salin seluruh source code Laravel ke container
 COPY . .
 
-# Set permission untuk folder Laravel
-RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html/storage \
-    && chmod -R 755 /var/www/html/bootstrap/cache
+# Generate key dan pastikan permission storage dan bootstrap/cache sudah benar
+RUN php artisan key:generate && \
+    chmod -R 777 storage bootstrap/cache
 
-# Expose port 9000 (PHP-FPM)
+# Install Node.js dependencies dan build asset frontend (seperti di GitHub Actions)
+RUN npm install && npm run build
+
+# Expose port 9000 dan jalankan PHP-FPM
 EXPOSE 9000
-
-# Menjalankan PHP-FPM sebagai service
 CMD ["php-fpm"]
